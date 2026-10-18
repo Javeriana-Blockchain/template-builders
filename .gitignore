@@ -1,0 +1,17 @@
+# secretos: nunca
+.env
+.env.*
+*.secret
+*seed*
+*.pem
+# sistema y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# rust
+target/
+Cargo.lock.bak
+# stellar-cli
+.stellar/
