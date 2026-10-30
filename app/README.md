@@ -11,6 +11,17 @@ npm run dev                 # http://localhost:5173
 
 Requisitos: Node 20+, Freighter en TEST NET con la misma cuenta que tiene XLM (las invocaciones que cambian estado pagan fee).
 
+
+## Sin computador propio: GitHub Codespaces
+
+Desde la página del repo en GitHub: **Code → Codespaces → Create codespace on main**. En la terminal del Codespace:
+
+```bash
+cd app && npm install && npm run dev
+```
+
+En la pestaña **Ports** aparece el 5173: ábrelo con el icono del globo (se abre en `https://...app.github.dev`). Freighter funciona en esa URL igual que en localhost. El `vite.config.js` ya detecta Codespaces (variable `CODESPACES`) y permite ese host.
+
 ## Cómo habla la app con el contrato
 
 - `src/contract.js`: `contract.Client.from(...)` del SDK lee la interfaz del contrato directamente de la red y expone una función JS por cada función del contrato. `hello` solo se simula (lectura); `count` y `decrement` se simulan, se firman en Freighter y se envían.
