@@ -56,9 +56,17 @@ stellar contract invoke --id hello_world --source-account alice --network testne
 
 ## Diseño del contrato (sesión 3)
 
+El diseño completo vive en [`docs/DISENO_CONTRATO.md`](docs/DISENO_CONTRATO.md). Resumen:
+
 | Función | Quién la puede llamar (`require_auth`) | Storage que toca | Error que devuelve |
 |---|---|---|---|
 | | | | |
+
+## Frontend (sesión 3)
+
+Carpeta `app/`: Vite + React que invoca el contrato con Freighter. Ver `app/README.md` para correrla.
+
+Hash de un `count` hecho desde la app: `<64 caracteres hexadecimales>`
 
 ## Declaración de uso de IA del proyecto
 
